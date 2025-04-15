@@ -22,4 +22,3 @@ class OrderSettingsPage(BasePage):
 
     def get_text_popup_order(self):
         return self.get_text_on_element(OrderSettingsLocators.TEXT_POPUP_ORDER)
-

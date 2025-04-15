@@ -1,9 +1,7 @@
-import time
-from datetime import date, timedelta, datetime
-
+from datetime import date, timedelta
 
 main_site = 'https://qa-scooter.praktikum-services.ru/'
-subway = 'Черкизовская'
+metro = 'Черкизовская'
 popup_text_order = 'Посмотреть статус'
 dzen_url = 'https://dzen.ru/?yredirect=true'
 
