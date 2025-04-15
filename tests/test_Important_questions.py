@@ -1,8 +1,11 @@
+import allure
 import pytest
 from pages.main_page import MainPage
 import data
 
 class TestImportantQuestions:
+
+    @allure.title("Проверка текста ответов в блоке вопросы о важном")
     @pytest.mark.parametrize('question_number, answer_text', data.Questions.block_questions)
     def test_text_all_question(self, driver, question_number, answer_text):
         main_page = MainPage(driver)

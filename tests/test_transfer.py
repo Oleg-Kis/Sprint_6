@@ -1,8 +1,10 @@
+import allure
 from data import *
 from pages.main_page import MainPage
 
 class TestTransfer:
 
+    @allure.title("Переход на сгавную страницу по клику лого самокат")
     def test_click_logo_scooter(self, driver):
         logo_scooter = MainPage(driver)
         logo_scooter.click_but_up_order()
@@ -11,6 +13,7 @@ class TestTransfer:
 
         assert current_url == main_site
 
+    @allure.title("Переход на сайт Дзен по клику лого Яндекс")
     def test_click_logo_yandex(self, driver):
         logo_yandex = MainPage(driver)
         logo_yandex.click_on_logo_yandex()

@@ -1,3 +1,4 @@
+import allure
 from helper import generate_reg_data
 from pages.order_page import OrderPage
 from pages.main_page import MainPage
@@ -7,6 +8,7 @@ from data import *
 
 class TestOrderScooter:
 
+    @allure.title("Заказ самоката по клику заказать в хедере страницы")
     def test_order_up_button(self, driver):
         name, last_name, city, number = generate_reg_data()
         test_order = MainPage(driver)
@@ -25,6 +27,7 @@ class TestOrderScooter:
 
         assert popup_text == popup_text_order
 
+    @allure.title("Заказ самоката по клику заказать внизу страницы")
     def test_order_down_button(self, driver):
         name, last_name, city, number = generate_reg_data()
         test_order = MainPage(driver)
