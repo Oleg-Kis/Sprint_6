@@ -17,5 +17,14 @@ class MainPage(BasePage):
     def click_on_logo_scooter(self):
         self.click_on_element(MainLocators.LOGO_SCOOTER)
 
-    def check_text_answer(self):
-        self.
+    def wait_but_sign_up(self):
+        self.wait_for_element(MainLocators.BUT_SIGN_UP)
+
+    def click_on_question(self, question_number):
+        question_locator = MainLocators.question_number(question_number)
+        self.scroll_to_element(question_locator)
+        self.click_on_element(question_locator)
+
+    def check_answer(self, answer_text):
+        actual_text = self.get_text_on_element(MainLocators.ANSWER)
+        return actual_text == answer_text

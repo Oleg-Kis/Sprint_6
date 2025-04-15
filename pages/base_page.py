@@ -18,7 +18,7 @@ class BasePage:
         element.clear()
         element.send_keys(keys)
 
-    def grt_text_on_element(self, locator, timeout=10):
+    def get_text_on_element(self, locator, timeout=10):
         element = self.wait_for_element(locator, timeout)
         return element.text
 

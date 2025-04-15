@@ -5,7 +5,7 @@ from data import *
 
 @pytest.fixture
 def driver():
-    browser = webdriver.Chrome()
+    browser = webdriver.Firefox()
     browser.get(main_site)
     yield browser
     browser.quit()

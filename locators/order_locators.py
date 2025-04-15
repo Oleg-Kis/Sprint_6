@@ -7,3 +7,4 @@ class OrderLocators:
     SUBWAY = (By.XPATH, ".//input[@placeholder='* Станция метро']") #поле Метро
     PHONE = (By.XPATH, ".//input[contains(@placeholder, 'Телефон')]") #поле Телефон
     BUT_NEXT = (By.XPATH, ".//button[text()='Далее']") #кнопка Далее
+    SUBWAY_CLICK = (By.XPATH, ".//li[@class='select-search__row']")
