@@ -1,6 +1,6 @@
 import allure
-from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class BasePage:
@@ -31,3 +31,11 @@ class BasePage:
     def scroll_to_element(self, locator, timeout=10):
         element = self.wait_for_element(locator, timeout)
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
+
+    @allure.step("Получить URL страницы")
+    def get_url(self):
+        return self.driver.current_url
+
+    @allure.step("Перейти на следующую вкладку")
+    def switch_to_window(self):
+        self.driver.switch_to.window(self.driver.window_handles[1])
